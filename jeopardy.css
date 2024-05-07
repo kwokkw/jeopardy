@@ -1,0 +1,111 @@
+/* some colors you may find useful:
+  #115ff4 - background 
+  #060ce9 - question card 
+  #28a200 - answer cacrd 
+  #8d2ab5 - button 
+  #74119c - hover/loading
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #115ff4;
+  color: white;
+}
+
+button {
+  margin-top: 0.5rem;
+  background-color: #8d2ab5;
+  padding: 0.5rem 2.25rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+button:hover {
+  background-color: #74119c;
+  cursor: pointer;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+th {
+  text-transform: uppercase;
+  width: 132px;
+  height: auto;
+  font-size: 0.75em;
+}
+
+td {
+  text-transform: capitalize;
+  width: 132px;
+  height: 132px;
+  font-size: 0.75em;
+}
+
+td, th {
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  border: 1px solid white;
+}
+
+/* Spinner */
+.spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.75s linear infinite;
+}
+.spinner div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.spinner div:nth-child(1) {
+  top: 36.8px;
+  left: 66.24px;
+}
+.spinner div:nth-child(2) {
+  top: 22.08px;
+  left: 62.29579px;
+}
+.spinner div:nth-child(3) {
+  top: 11.30421px;
+  left: 51.52px;
+}
+.spinner div:nth-child(4) {
+  top: 7.36px;
+  left: 36.8px;
+}
+.spinner div:nth-child(5) {
+  top: 11.30421px;
+  left: 22.08px;
+}
+.spinner div:nth-child(6) {
+  top: 22.08px;
+  left: 11.30421px;
+}
+.spinner div:nth-child(7) {
+  top: 36.8px;
+  left: 7.36px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
