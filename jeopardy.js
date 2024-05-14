@@ -148,6 +148,10 @@ function showLoadingView() {
 function hideLoadingView() {
   $(".spinner").remove();
   $("#start-btn").text("restart");
+
+  // create a button
+  // add click event to the restart button
+  // reload the page
 }
 
 /** Start game:
@@ -158,6 +162,8 @@ function hideLoadingView() {
  * */
 
 async function setupAndStart() {
+  console.log($("#jeopardy"));
+  $("#jeopardy").remove();
   // TODO
   showLoadingView();
 
@@ -168,6 +174,7 @@ async function setupAndStart() {
     .append($("<thead></thead>"))
     .append($("<tbody></tbody>"));
 
+  // $("#jeopardy").replaceWith($gameBoard);
   $(".spinner").after($gameBoard);
 
   // TODO
@@ -175,6 +182,8 @@ async function setupAndStart() {
 
   // TODO
   hideLoadingView();
+
+  // hide the start button
 }
 
 /** On click of start / restart button, set up game. */
@@ -187,4 +196,6 @@ $("#start-btn").on("click", setupAndStart);
 //   $("tbody").on("click", "td", function (e) {
 //     console.log("clicked");
 //   });
+//
+//  // hide the restart button
 // });
